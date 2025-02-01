@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        
+        nav{
+            width: 130px;
+            height: 100%;
+            position: fixed;
+            /* left: 0px; */
+            background-color:rgb(53, 54, 56);
+            z-index: 999;
+        }
+        nav .item1 img {
+            height:150px;
+            width:130px;
+            object-fit: cover;
+            opacity:0.4;
+            /* margin-bottom: -10px; */
+        }
+         a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .item{
+            width:130px;
+            height: 120px;
+            cursor: pointer;
+            text-align: center;
+            color: aliceblue;
+            margin-top: -4px;
+            padding: 10px;
+            
+        }
+        .item2{
+            background-color: black;
+        }
+        .item2:hover{
+        background-color: rgb(13, 13, 14);
+        }
+        .item3:hover,.item4:hover,.item5:hover{
+        background-color: black;
+        }
+        .container{
+               width:100%;
+               display: flex;
+               justify-content:center;
+               align-items:center;
+               background-color: black;
+        }
+        .main{
+            padding: 10px;
+               width:900px;
+               font-family: "Montserrat", sans-serif;
+
+               /* display: flex;
+               justify-content:center;
+               align-items:center; */
+                }
+        .heading{
+                padding: 20px;
+                line-height:100px;
+                }
+        .heading h1{
+                text-align: center;
+                font-size:64px;
+                font-family: "Montserrat", sans-serif;
+                letter-spacing:10px;
+                color: rgb(250, 245, 245);
+                }
+        .heading p{
+                color: aliceblue;
+                font-size: 20px;
+                text-align: center;
+                }
+           .top_background_img{
+                width:100%;
+                height:100%;
+                padding:400px;
+                background-size: cover;
+                background-image: url(https://www.w3schools.com/w3images/man_smoke.jpg);
+            }
+            .main .my_name{
+              margin-top: 300px;
+              width: 100%;
+              color: aliceblue;
+            }
+            .main .my_name :first-child{
+                font-size:40px;
+                line-height: 1.9;
+                border-bottom:2px solid rgb(242, 240, 237);
+            }
+            .main .my_name :nth-child(2){
+                margin: 10px;
+                font-size: 15px;
+                line-height:25px;
+            }
+            .my_skills{
+                width: 100%;
+                margin-top: 30px;
+            }
+            .my_skills :first-child{
+                color: aliceblue;
+                font-size:30px;
+            }
+            .my_skills p{
+                margin-top: 10px;
+                color:rgb(113, 110, 110);
+                letter-spacing:5px;
+            }
+            .my_skills .box_photography{
+                width: 100%;
+                /* height: 20px; */
+                display: grid;
+                padding: 10px;
+                grid-template-rows:20px 10px ;
+                grid-template-areas: 'a b'
+            }
+            .box_photography .content1{
+                background-color: rgb(82, 81, 79);
+                grid-area:a;
+            }
+            .box_photography .content2{
+                background-color:rgb(251, 251, 250); 
+                grid-area:b;
+            }
+            
+            .Partner_project_clients_meetings{
+                width: 100%;
+                height: 150px;
+                background-color: aliceblue;
+                display: flex;
+                justify-content:space-evenly;
+                align-items: center;
+            }
+            .Partner_project_clients_meetings .item{
+                color: rgb(10, 10, 10);
+                width: 250px;
+                height:80px;
+                font-size: 20px;
+            }
+            .download_button{
+                margin-top: 30px;
+                padding: 10px;
+                text-align: center;
+                width:200px;
+                height:40px;
+                background-color: aliceblue;
+            }
+            .download_button p{
+                text-align: center;
+                font-size:15px;
+                letter-spacing: 2px;
+            }
+            .myprice{
+                width: 100%;
+                margin-top:50px;
+            }
+            .myprice p{
+                 color: white;
+                 font-size: 25px;
+            }
+            .Price{
+                width:400px;
+                text-align: center;
+            }
+            .Basic_Pro{
+                /* gap: 10px; */
+                display: flex;
+                justify-content:space-evenly;
+                text-align: center;
+                gap:10px;
+            }
+            .PriceBasic,.PricePro{
+                width: 100%;
+            }
+            
+            .heading_basic_pro{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: rgb(131, 129, 129);
+                font-size:25px;
+                height:80px;
+                background-color:rgb(72, 70, 70);
+            }
+            .basic_pro{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height:60px;
+                background-color:rgb(168, 169, 170);
+                border: 1px solid rgb(147, 147, 147);
+            }
+            
+            .My_Reputation h1{
+                color: aliceblue;
+                margin-top: 50px;
+            }
+            .chris_Fox ,.Rebecca_Flex{
+                width: 100%;
+                display: flex;
+                margin-top: 30px;
+            }
+            .chris_Fox img ,.Rebecca_Flex img{
+                width:90px;
+                border-radius: 50%;
+            }
+            .chris_Fox p,.Rebecca_Flex p {
+                padding: 10px;
+                color: aliceblue;
+                line-height:20px;
+            }
+            .my_photos p{
+                padding: 10px;
+                font-size: 30px;
+                color: aliceblue;
+                margin-top: 50px;
+                letter-spacing: 2px;
+                border-bottom: 2px solid white;
+            }
+            .my_photos_img{
+                margin-top: 50px;
+                width: 100%;
+                display: grid;
+                gap: 15px;
+                grid-template-columns:repeat(2,1fr);
+                grid-template-areas: 
+                'a b'
+                'c b'
+                'c d'
+                'c e'
+                'f g';
+            } 
+            .img{
+                background-size: cover;
+            }
+            .img1{
+                height:300px;   
+                background-image: url(https://www.w3schools.com/w3images/wedding.jpg);
+                grid-area: a;
+            }
+            .img2{
+                background-image:url(https://www.w3schools.com/w3images/underwater.jpg);
+                 grid-area: b;
+            }
+            .img3{
+                height:600px;
+                background-image: url(https://www.w3schools.com/w3images/rocks.jpg);
+                grid-area: c;
+            }
+            .img4{
+                background-image: url(https://www.w3schools.com/w3images/chef.jpg);
+                 grid-area: d;
+            }
+            .img5{
+                background-image: url(https://www.w3schools.com/w3images/wedding.jpg);
+                grid-area: e;
+            }
+            .img6{
+                height: 300px;
+                background-image: url(https://www.w3schools.com/w3css/img_sailboat.jpg);
+                grid-area: f;
+            }
+            .img7{
+                height:300px;
+                background-image: url(https://www.w3schools.com/w3images/p6.jpg);
+                grid-area: g;
+            }
+            .contact_me{
+                margin-top: 50px;
+            }
+            .contact_me>p{
+                color: aliceblue;
+                font-size: 30px;
+                border-bottom: 2px solid white;
+            }
+            .icon_text{
+                margin-top: 20px;
+            }
+            .icon_text1 ,.icon_text2,.icon_text3{
+                display: flex;
+                color: rgb(106, 108, 109);
+            }
+            .icon_text1 p,.icon_text2 p,.icon_text3 p{
+                font-size: 20px;
+                padding-top:20px;
+                padding-left: 20px;
+            }
+            .message_box{
+                margin-top: 30px;
+            }
+            .message_box p{
+                margin-bottom:20px;
+                color: rgb(128, 132, 135);
+            }
+            .message_text_box{
+                color: rgb(99, 100, 101);
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .message {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+                background-color: aliceblue;
+            } 
+            .send_message{ 
+                display: flex;
+                align-items: center;
+                width:200px;
+                height: 50px;
+                background-color: aliceblue;
+                padding: 10px;   
+            } 
+            .send_message>p{
+               padding-left:10px;
+               padding-top:25px;
+            }
+            footer{
+                height:200px;
+            }
+            .icons{
+                align-items:end;
+                /* height:150px; */
+                margin-top: 80px;
+                display: flex;
+                color: rgb(107, 111, 113);
+                gap: 5px;
+            }
+            footer p{
+                margin-top:20px;
+                font-size:17px;
+                color: rgb(118, 122, 123);
+            }
+              @media screen and (max-width : 600px) {
+                nav{
+                width: 100%;
+                height:40px;
+                top:0px;  
+                display: flex;
+                justify-content: space-evenly;
+                padding: 10px;
+                background-color: black;
+                 }
+                nav .item1 img{
+                    display: none;
+                }
+                
+                nav .item{
+                    height:30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    /* padding: 0px; */
+                  }
+                  nav .icon{
+                    display: none;
+                }
+                  nav  :hover>.item{
+                    
+                    color: rgb(10, 10, 10);
+                    background-color: aliceblue;
+                }
+                .container {
+
+                }
+                .main{
+                    width:100%; 
+                }
+                .heading h1{
+                    padding: 10px;
+                    font-size: 30px;
+                }
+                .heading p{
+                     line-height: normal;
+                }
+                .top_background_img{
+                   padding:200px;
+                   background-image: url(https://www.w3schools.com/w3images/man_smoke.jpg);
+                   background-size: cover;
+                   
+                }
+                .main .my_name{
+                    padding: 10px;
+                    margin-top:100px;
+                }
+                .Partner_project_clients_meetings{
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    align-items: center;
+                }
+                .Partner_project_clients_meetings .item{
+                    align-items:center;
+                    width:auto;
+                }
+                .Basic_Pro{
+                  display: block;
+                   
+                }
+                .PriceBasic,.PricePro{
+                  padding: 10px;
+                }
+                .my_photos_img{
+                grid-template-columns:repeat(1,1fr);
+                grid-template-areas: 
+                'a'
+                'b'
+                'c'
+                'd'
+                'e'
+                'f '
+                'g';
+                }
+                }
+                @media screen and (min-width :601px) and (max-width :1200px) {
+                
+                  .top_background_img{
+                   width: 100%;
+                    
+                   padding:300px;
+                 }
+                .heading h1{
+                    padding: 10px;
+                    font-size: 50px;
+                }
+                .heading p{
+                     line-height: normal;
+                }
+                .main{
+                    width:100%;
+                   
+                }
+                .main .my_name{
+                    padding-left:120px;
+                    margin-top:100px;
+                }
+                .my_skills{
+                padding-left:130px;
+                width: 100%;
+                margin-top: 30px;
+             }
+                .Partner_project_clients_meetings{
+                padding-left:150px;     
+            }
+            .download_button{
+                 margin-left: 130px;
+            }
+            .Basic_Pro{
+                 width: 80%;
+                 margin-left:135px;
+             }
+             .My_Reputation h1{
+                 margin-left: 150px;
+            }
+            .chris_Fox ,.Rebecca_Flex{
+                margin-left: 150px;   
+            }
+            .my_photos p{
+                margin-left: 150px;
+            }
+            .my_photos_img{
+                margin-left:130px;
+                width: 80%;
+            }
+            .contact_me{
+                margin-left:150px;
+            }
+            .message_box{
+                width: 80%;
+                margin-left: 140px;
+            }
+            footer{
+                margin-left:150px;
+                height:100px;
+            }
+                }
+               
+              
+              
+             
+    </style>
+</head>
+<body>
+     <nav>
+            <div  class="item1">
+                <img src="https://www.w3schools.com/w3images/man_smoke.jpg">
+            </div>
+            <a href="#home"> <div class="item item2">
+                <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                      </svg></div>
+                    
+                <p>HOME</p>
+                </div></a>
+                <a href="#ABOUT"><div class="item item3">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="50" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg></div>
+                  <p>ABOUT</p>
+                  
+                 </div></a>
+                 <a href="#PHOTOS"><div class="item item4">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                  </svg></div>
+                
+                 <p>PHOTOS</p>
+            </div></a>
+            <a href="#CONTACT"><div class="item item5">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                  </svg></div>
+                  
+                 <p>CONTACT</p>
+                </div></a>
+     </nav>
+
+        <div id="home" class="container"> 
+              <div class="main">
+                   <div class="heading">
+                    <h1>i'm John Doe</h1>
+                    <p>Photographer Web Designer</p>
+                   </div>
+                   <div class="top_background_img"></div>
+                 <div  class="my_name">
+                    <p>My name  </p>
+                     <P> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    </P>
+                 </div>
+           <div id="ABOUT" class="my_skills">
+                <h6>My Skills</h6>
+                <p>Photography</p>
+                <div class="box_photography">
+                    <div class="content content1"></div>
+                    <div class="content content2"></div>
+                </div>
+                <p>Web Design</p>
+                <div class="box_webdesign">
+                    <div class="box_photography">
+                        <div class="content content1"></div>
+                        <div class="content content2"></div>
+                    </div>
+                </div>
+                <p>Photoshop</p>
+                <div class="box_photoshop">
+                    <div class="box_photography">
+                        <div class="content content1"></div>
+                        <div class="content content2"></div>
+                    </div>
+                </div>
+                 </div>
+
+                 <div class="Partner_project_clients_meetings">
+                    <div class="item Partners">
+                        <p>11+</p>
+                        <p>Partners</p>
+                    </div>
+                    <div class="item project_done">
+                        <p>55+</p>
+                        <p>Projects Done</p>
+                    </div>
+                    <div class="item Happy Clients">
+                        <p>89+</p>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="item Meeting">
+                        <p>150+</p>
+                        <p>Meeting</p>
+                    </div>
+                </div>
+               <div class="download_button">
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                  </svg>Download Resume</p>
+               </div>     
+            <div class="myprice">
+                <p>My Price</p>
+                <div class="Basic_Pro">
+                    <div class="PriceBasic">
+                        <div class="heading_basic_pro  heading_Basic">Basic</div>
+                       
+                        <div class="basic_pro">Web Design</div>
+                        <div class="basic_pro">Photography</div>
+                        <div class="basic_pro">5GBS Storage</div>
+                        <div class="basic_pro">Mail Support</div>
+                         <div class="basic_pro">$10<br> month</div>
+                        <div class="basic_pro">signup</div>
+                       
+                 </div>
+                 <div class="PricePro">
+                    <div class="heading_basic_pro heading_pro">Pro</div>
+                     <div class="basic_pro">Web Design</div>
+                     <div class="basic_pro">Photography</div>
+                     <div class="basic_pro">50GBS Storage</div>
+                     <div class="basic_pro">Endless Support</div>
+                       <div class="basic_pro">$25<br>per month</div>
+                      <div class="basic_pro">signup</div>
+                       </div>
+                   </div> 
+                </div>
+           <div class="My_Reputation">
+            <h1>My Reputation</h1>
+            <div class="chris_Fox">
+                <img src="https://www.w3schools.com/bootstrap/bandmember.jpg">
+               <span>
+                    <p>Chris Fox. CEO at Mighty Schools.</p>
+                    <p>John Doe saved us from a web disaster.</p>
+                </span>
+            </div>
+            <div class="Rebecca_Flex">
+             <img src="https://www.w3schools.com/w3images/avatar_g.jpg">
+             <span> 
+             <p>Rebecca Flex. CEO at Company.</p>
+             <p>No one is better than John Doe.</p>
+            </span>
+            </div>
+           </div>
+
+           <div id="PHOTOS" class="my_photos">
+            <p>My Photos</p>
+            <div class="my_photos_img">
+            <div class="img img1"></div>
+            <div class="img img2"></div>
+            <div class="img img3"></div>
+            <div class="img img4"></div>
+            <div class="img img5"></div>
+            <div class="img img6"></div>
+            <div class="img img7"></div>
+        </div>
+           </div>
+           <div id="CONTACT" class="contact_me">
+            <p>Contact Me</p>
+           <div class="icon_text">
+            <div class="icon_text1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                  </svg>
+                  <p> Chicago, US</p>
+            </div>
+            <div class="icon_text2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                  </svg>
+                  <p> Phone: +00 151515</p>
+            </div>
+            <div class="icon_text3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="60" fill="white" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                  </svg>
+                  <p> Email: mail@mail.com</p>
+            </div>
+           </div>
+           </div>
+           <div class="message_box">
+            <p>Let's get intouch. Send me a message:</p>
+           <div class="message_text_box">
+            <div class="message message1">Name</div>
+            <div class="message message2">Email</div>
+            <div class="message message3">Subject</div>
+            <div class="message message4">Message</div>
+            <div class="send_message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="" class="bi bi-send-fill" viewBox="0 0 16 16">
+                    <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+                  </svg>
+                  <p>SEND MESSAGE</p>
+            </div>
+           </div>
+           </div>
+           <footer>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-snapchat" viewBox="0 0 16 16">
+                    <path d="M15.943 11.526c-.111-.303-.323-.465-.564-.599a1 1 0 0 0-.123-.064l-.219-.111c-.752-.399-1.339-.902-1.746-1.498a3.4 3.4 0 0 1-.3-.531c-.034-.1-.032-.156-.008-.207a.3.3 0 0 1 .097-.1c.129-.086.262-.173.352-.231.162-.104.289-.187.371-.245.309-.216.525-.446.66-.702a1.4 1.4 0 0 0 .069-1.16c-.205-.538-.713-.872-1.329-.872a1.8 1.8 0 0 0-.487.065c.006-.368-.002-.757-.035-1.139-.116-1.344-.587-2.048-1.077-2.61a4.3 4.3 0 0 0-1.095-.881C9.764.216 8.92 0 7.999 0s-1.76.216-2.505.641c-.412.232-.782.53-1.097.883-.49.562-.96 1.267-1.077 2.61-.033.382-.04.772-.036 1.138a1.8 1.8 0 0 0-.487-.065c-.615 0-1.124.335-1.328.873a1.4 1.4 0 0 0 .067 1.161c.136.256.352.486.66.701.082.058.21.14.371.246l.339.221a.4.4 0 0 1 .109.11c.026.053.027.11-.012.217a3.4 3.4 0 0 1-.295.52c-.398.583-.968 1.077-1.696 1.472-.385.204-.786.34-.955.8-.128.348-.044.743.28 1.075q.18.189.409.31a4.4 4.4 0 0 0 1 .4.7.7 0 0 1 .202.09c.118.104.102.26.259.488q.12.178.296.3c.33.229.701.243 1.095.258.355.014.758.03 1.217.18.19.064.389.186.618.328.55.338 1.305.802 2.566.802 1.262 0 2.02-.466 2.576-.806.227-.14.424-.26.609-.321.46-.152.863-.168 1.218-.181.393-.015.764-.03 1.095-.258a1.14 1.14 0 0 0 .336-.368c.114-.192.11-.327.217-.42a.6.6 0 0 1 .19-.087 4.5 4.5 0 0 0 1.014-.404c.16-.087.306-.2.429-.336l.004-.005c.304-.325.38-.709.256-1.047m-1.121.602c-.684.378-1.139.337-1.493.565-.3.193-.122.61-.34.76-.269.186-1.061-.012-2.085.326-.845.279-1.384 1.082-2.903 1.082s-2.045-.801-2.904-1.084c-1.022-.338-1.816-.14-2.084-.325-.218-.15-.041-.568-.341-.761-.354-.228-.809-.187-1.492-.563-.436-.24-.189-.39-.044-.46 2.478-1.199 2.873-3.05 2.89-3.188.022-.166.045-.297-.138-.466-.177-.164-.962-.65-1.18-.802-.36-.252-.52-.503-.402-.812.082-.214.281-.295.49-.295a1 1 0 0 1 .197.022c.396.086.78.285 1.002.338q.04.01.082.011c.118 0 .16-.06.152-.195-.026-.433-.087-1.277-.019-2.066.094-1.084.444-1.622.859-2.097.2-.229 1.137-1.22 2.93-1.22 1.792 0 2.732.987 2.931 1.215.416.475.766 1.013.859 2.098.068.788.009 1.632-.019 2.065-.01.142.034.195.152.195a.4.4 0 0 0 .082-.01c.222-.054.607-.253 1.002-.338a1 1 0 0 1 .197-.023c.21 0 .409.082.49.295.117.309-.04.56-.401.812-.218.152-1.003.638-1.18.802-.184.169-.16.3-.139.466.018.14.413 1.991 2.89 3.189.147.073.394.222-.041.464"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                  </svg>
+                </div>
+            <p>Powered by<a href="">w3.css</a></p>
+        
+           </footer>
+        </div>
+    </div>
+</body>
+</html>
