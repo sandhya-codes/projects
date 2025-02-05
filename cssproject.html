@@ -17,8 +17,9 @@
             height: 100%;
             position: fixed;
             /* left: 0px; */
-            /* background-color:rgb(53, 54, 56); */
+            background-color:rgb(53, 54, 56);
             z-index: 999;
+            
         }
         nav .item1 img {
             height:150px;
@@ -27,7 +28,7 @@
             opacity:0.4;
             /* margin-bottom: -10px; */
         }
-         a {
+        a {
             text-decoration: none;
             color: aliceblue;
         }
@@ -53,26 +54,26 @@
         .container{
                width:100%;
                display: flex;
-               justify-content:center;
+               flex-direction: column;
                align-items:center;
-               background-color: black;
+               /* background-color: black; */
+               background-color: rgb(207, 54, 15);
         }
         .main{
-               /* padding: 10px; */
-               width:100%;
+               padding: 10px;
+               width:60%;
+               border: 2px solid yellow;
                font-family: "Montserrat", sans-serif;
-
-               /* display: flex;
-               justify-content:center;
-               align-items:center; */
+               display: flex;
+               flex-direction: column;
+               align-items:center;
+              
                 }
         .heading{
-                width:auto;
                 padding: 20px;
                 line-height:100px;
                 }
         .heading h1{
-             
                 text-align: center;
                 font-size:64px;
                 font-family: "Montserrat", sans-serif;
@@ -80,18 +81,21 @@
                 color: rgb(250, 245, 245);
                 }
         .heading p{
-                
                 color: aliceblue;
                 font-size: 20px;
                 text-align: center;
                 }
            .top_background_img{
-                width:100%;
-                height:100%;
-                padding:400px;
-                /* box-shadow: rgba(244, 243, 243, 0.35) 10px 15px 15px; */
-                background-size: cover;
-                background-image: url(https://www.w3schools.com/w3images/man_smoke.jpg);
+                width:90%;
+                /* height:100px;
+                padding:400px; */
+                /* background-image: url(https://www.w3schools.com/w3images/man_smoke.jpg); */
+                /* background-size: cover; */
+                /* object-fit: cover; */
+            }
+            .top_background_img img{
+                width: 100%;
+                object-fit: cover;
             }
             .main .my_name{
               margin-top: 300px;
@@ -153,6 +157,7 @@
                 font-size: 20px;
             }
             .download_button{
+                 
                 margin-top: 30px;
                 padding: 10px;
                 text-align: center;
@@ -205,7 +210,9 @@
                 background-color:rgb(168, 169, 170);
                 border: 1px solid rgb(147, 147, 147);
             }
-            
+            .My_Reputation{
+                width: 100%;
+            }
             .My_Reputation h1{
                 color: aliceblue;
                 margin-top: 50px;
@@ -224,6 +231,10 @@
                 color: aliceblue;
                 line-height:20px;
             }
+            .my_photos{
+                width: 100%;
+                border: 3px solid rgb(60, 0, 255);
+            }
             .my_photos p{
                 padding: 10px;
                 font-size: 30px;
@@ -231,8 +242,10 @@
                 margin-top: 50px;
                 letter-spacing: 2px;
                 border-bottom: 2px solid white;
+                
             }
             .my_photos_img{
+                border: 3px solid rgb(215, 209, 27);
                 margin-top: 50px;
                 width: 100%;
                 display: grid;
@@ -249,18 +262,22 @@
                 background-size: cover;
             }
             .img1{
-                height:300px;   
+                border: 3px solid red;
+                height:300px;/* 
+                width:300px;   */
                 background-image: url(https://www.w3schools.com/w3images/wedding.jpg);
                 grid-area: a;
             }
             .img2{
+                /* width:300px; */
                 background-image:url(https://www.w3schools.com/w3images/underwater.jpg);
-                 grid-area: b;
+                grid-area: b;
             }
             .img3{
                 height:600px;
                 background-image: url(https://www.w3schools.com/w3images/rocks.jpg);
                 grid-area: c;
+                object-fit: cover;
             }
             .img4{
                 background-image: url(https://www.w3schools.com/w3images/chef.jpg);
@@ -273,22 +290,29 @@
             .img6{
                 height: 300px;
                 background-image: url(https://www.w3schools.com/w3css/img_sailboat.jpg);
+                background-size: cover;
                 grid-area: f;
+                
             }
             .img7{
                 height:300px;
                 background-image: url(https://www.w3schools.com/w3images/p6.jpg);
+                background-size: cover;
                 grid-area: g;
+
             }
             .contact_me{
                 margin-top: 50px;
+                width:100%;
             }
             .contact_me>p{
                 color: aliceblue;
                 font-size: 30px;
                 border-bottom: 2px solid white;
+                width:300px;
             }
             .icon_text{
+                
                 margin-top: 20px;
             }
             .icon_text1 ,.icon_text2,.icon_text3{
@@ -302,6 +326,7 @@
             }
             .message_box{
                 margin-top: 30px;
+                width: 100%;
             }
             .message_box p{
                 margin-bottom:20px;
@@ -350,26 +375,26 @@
             }
               @media screen and (max-width : 600px) {
                 nav{
-                width: 90%;
+                width: 100%;
                 height:40px;
                 top:0px;  
                 display: flex;
                 justify-content: space-evenly;
                 padding: 10px;
-                /* background-color: black; */
+                background-color: black;
                  }
                 nav .item1 img{
                     display: none;
                 }
                 
-                nav .item{
+                 nav .item{
                     height:30px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     background-color: black;
-                    /* padding: 0px; */
-                  }
+                    padding: 0px;
+                   }
                   nav .icon{
                     display: none;
                 }
@@ -385,14 +410,13 @@
                 .heading h1{
                     padding: 10px;
                     font-size: 30px;
-                }
-                .heading p{
+                }  
+                /* .heading p{
                      line-height: normal;
                 }
                 .top_background_img{
-                   /* border: 2px solid aqua; */
-                   padding:180px;
-                   width:100%;
+                   padding:200px;
+                   width: auto;
                    background-image: url(https://www.w3schools.com/w3images/man_smoke.jpg);
                    background-size: cover;
                    
@@ -406,8 +430,8 @@
                     width: 100%;
                     height: auto;
                     align-items: center;
-                }
-                .Partner_project_clients_meetings .item{
+                } */
+                /* .Partner_project_clients_meetings .item{
                     align-items:center;
                     width:auto;
                 }
@@ -428,12 +452,18 @@
                 'e'
                 'f '
                 'g';
-                }
-                }
-                @media screen and (min-width :601px) and (max-width :1200px) {
+                }*/
+                } 
+                /* @media screen and (min-width :601px) and (max-width :1200px) {
                 
-                  .top_background_img{
+                
+                .main{
+                    width:100%;
+                    
+                }
+                .top_background_img{
                    width:100%;
+                    
                    padding:300px;
                  }
                 .heading h1{
@@ -442,10 +472,6 @@
                 }
                 .heading p{
                      line-height: normal;
-                }
-                .main{
-                    width:100%;
-                   
                 }
                 .main .my_name{
                     padding-left:120px;
@@ -492,7 +518,7 @@
             }
                 }
                
-              
+               */
               
              
     </style>
@@ -540,7 +566,9 @@
                     <h1>i'm John Doe</h1>
                     <p>Photographer Web Designer</p>
                    </div>
-                   <div class="top_background_img"></div>
+                   <div class="top_background_img">
+                    <img src="https://www.w3schools.com/w3images/man_smoke.jpg">
+                   </div>
                  <div  class="my_name">
                     <p>My name  </p>
                      <P> Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
